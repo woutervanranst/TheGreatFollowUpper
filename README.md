@@ -1,5 +1,14 @@
 # The Great FollowUpper
 
+- [The Great FollowUpper](#the-great-followupper)
+  - [What is The Great FollowUpper?](#what-is-the-great-followupper)
+  - [Installation](#installation)
+  - [Leveraging Outlook's Native Capabilities](#leveraging-outlooks-native-capabilities)
+    - [Categories](#categories)
+    - [To-Do Bar](#to-do-bar)
+  - [Settings](#settings)
+  - [Advanced Features](#advanced-features)
+
 ## What is The Great FollowUpper?
 
 The Great FollowUpper is an Outlook plug in that enables you to do great follow up, by leveraging Outlook's native Flagging & Categories.
