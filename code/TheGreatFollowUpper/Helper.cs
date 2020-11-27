@@ -10,7 +10,6 @@ namespace TheGreatFollowUpper
 {
     internal static class Helper
     {
-
         public static void GetConversationInformation(Outlook.MailItem theMailItem)
         {
 
@@ -108,7 +107,11 @@ namespace TheGreatFollowUpper
 
             if (addReminder)
             {
-                mail.ReminderTime = mail.TaskDueDate.AddHours(9);
+                if (businessDays == 0)
+                    mail.ReminderTime = mail.TaskDueDate.Add(Properties.Settings.Default.DefaultSameDayReminder);
+                else
+                    mail.ReminderTime = mail.TaskDueDate.Add(Properties.Settings.Default.DefaultOtherDayReminder);
+                
                 //mail.ReminderOverrideDefault = true;
                 mail.ReminderSet = true;
                 mail.Save();

@@ -44,13 +44,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.subjectText = new System.Windows.Forms.Label();
             this.addReminder = new System.Windows.Forms.CheckBox();
+            this.laterToday = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // flag
             // 
-            this.flag.Location = new System.Drawing.Point(109, 279);
+            this.flag.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.flag.Location = new System.Drawing.Point(166, 420);
+            this.flag.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.flag.Name = "flag";
-            this.flag.Size = new System.Drawing.Size(75, 23);
+            this.flag.Size = new System.Drawing.Size(112, 35);
             this.flag.TabIndex = 0;
             this.flag.Text = "&OK";
             this.flag.UseVisualStyleBackColor = true;
@@ -60,9 +63,10 @@
             // 
             this.none.AutoSize = true;
             this.none.Checked = true;
-            this.none.Location = new System.Drawing.Point(44, 58);
+            this.none.Location = new System.Drawing.Point(66, 89);
+            this.none.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.none.Name = "none";
-            this.none.Size = new System.Drawing.Size(95, 17);
+            this.none.Size = new System.Drawing.Size(138, 24);
             this.none.TabIndex = 1;
             this.none.TabStop = true;
             this.none.Tag = "None";
@@ -73,9 +77,10 @@
             // in1day
             // 
             this.in1day.AutoSize = true;
-            this.in1day.Location = new System.Drawing.Point(44, 81);
+            this.in1day.Location = new System.Drawing.Point(66, 155);
+            this.in1day.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.in1day.Name = "in1day";
-            this.in1day.Size = new System.Drawing.Size(107, 17);
+            this.in1day.Size = new System.Drawing.Size(157, 24);
             this.in1day.TabIndex = 1;
             this.in1day.Tag = "1";
             this.in1day.Text = "In 1 business day";
@@ -84,9 +89,10 @@
             // in2days
             // 
             this.in2days.AutoSize = true;
-            this.in2days.Location = new System.Drawing.Point(44, 104);
+            this.in2days.Location = new System.Drawing.Point(66, 188);
+            this.in2days.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.in2days.Name = "in2days";
-            this.in2days.Size = new System.Drawing.Size(112, 17);
+            this.in2days.Size = new System.Drawing.Size(165, 24);
             this.in2days.TabIndex = 1;
             this.in2days.Tag = "2";
             this.in2days.Text = "In 2 business days";
@@ -95,9 +101,10 @@
             // in3days
             // 
             this.in3days.AutoSize = true;
-            this.in3days.Location = new System.Drawing.Point(44, 127);
+            this.in3days.Location = new System.Drawing.Point(66, 221);
+            this.in3days.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.in3days.Name = "in3days";
-            this.in3days.Size = new System.Drawing.Size(112, 17);
+            this.in3days.Size = new System.Drawing.Size(165, 24);
             this.in3days.TabIndex = 1;
             this.in3days.Tag = "3";
             this.in3days.Text = "In 3 business days";
@@ -106,9 +113,10 @@
             // in4days
             // 
             this.in4days.AutoSize = true;
-            this.in4days.Location = new System.Drawing.Point(44, 150);
+            this.in4days.Location = new System.Drawing.Point(66, 254);
+            this.in4days.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.in4days.Name = "in4days";
-            this.in4days.Size = new System.Drawing.Size(112, 17);
+            this.in4days.Size = new System.Drawing.Size(165, 24);
             this.in4days.TabIndex = 1;
             this.in4days.Tag = "4";
             this.in4days.Text = "In 4 business days";
@@ -117,9 +125,10 @@
             // in5days
             // 
             this.in5days.AutoSize = true;
-            this.in5days.Location = new System.Drawing.Point(44, 173);
+            this.in5days.Location = new System.Drawing.Point(66, 287);
+            this.in5days.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.in5days.Name = "in5days";
-            this.in5days.Size = new System.Drawing.Size(112, 17);
+            this.in5days.Size = new System.Drawing.Size(165, 24);
             this.in5days.TabIndex = 1;
             this.in5days.Tag = "5";
             this.in5days.Text = "In 5 business days";
@@ -128,9 +137,10 @@
             // firstMonday
             // 
             this.firstMonday.AutoSize = true;
-            this.firstMonday.Location = new System.Drawing.Point(172, 81);
+            this.firstMonday.Location = new System.Drawing.Point(258, 155);
+            this.firstMonday.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.firstMonday.Name = "firstMonday";
-            this.firstMonday.Size = new System.Drawing.Size(85, 17);
+            this.firstMonday.Size = new System.Drawing.Size(125, 24);
             this.firstMonday.TabIndex = 1;
             this.firstMonday.Tag = "Monday";
             this.firstMonday.Text = "First Monday";
@@ -139,9 +149,10 @@
             // firstTuesday
             // 
             this.firstTuesday.AutoSize = true;
-            this.firstTuesday.Location = new System.Drawing.Point(172, 104);
+            this.firstTuesday.Location = new System.Drawing.Point(258, 188);
+            this.firstTuesday.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.firstTuesday.Name = "firstTuesday";
-            this.firstTuesday.Size = new System.Drawing.Size(88, 17);
+            this.firstTuesday.Size = new System.Drawing.Size(129, 24);
             this.firstTuesday.TabIndex = 1;
             this.firstTuesday.Tag = "Tuesday";
             this.firstTuesday.Text = "First Tuesday";
@@ -150,9 +161,10 @@
             // firstWednesday
             // 
             this.firstWednesday.AutoSize = true;
-            this.firstWednesday.Location = new System.Drawing.Point(172, 127);
+            this.firstWednesday.Location = new System.Drawing.Point(258, 221);
+            this.firstWednesday.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.firstWednesday.Name = "firstWednesday";
-            this.firstWednesday.Size = new System.Drawing.Size(104, 17);
+            this.firstWednesday.Size = new System.Drawing.Size(153, 24);
             this.firstWednesday.TabIndex = 1;
             this.firstWednesday.Tag = "Wednesday";
             this.firstWednesday.Text = "First Wednesday";
@@ -161,9 +173,10 @@
             // firstThursday
             // 
             this.firstThursday.AutoSize = true;
-            this.firstThursday.Location = new System.Drawing.Point(172, 150);
+            this.firstThursday.Location = new System.Drawing.Point(258, 254);
+            this.firstThursday.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.firstThursday.Name = "firstThursday";
-            this.firstThursday.Size = new System.Drawing.Size(91, 17);
+            this.firstThursday.Size = new System.Drawing.Size(134, 24);
             this.firstThursday.TabIndex = 1;
             this.firstThursday.Tag = "Thursday";
             this.firstThursday.Text = "First Thursday";
@@ -172,9 +185,10 @@
             // firstFriday
             // 
             this.firstFriday.AutoSize = true;
-            this.firstFriday.Location = new System.Drawing.Point(172, 173);
+            this.firstFriday.Location = new System.Drawing.Point(258, 287);
+            this.firstFriday.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.firstFriday.Name = "firstFriday";
-            this.firstFriday.Size = new System.Drawing.Size(75, 17);
+            this.firstFriday.Size = new System.Drawing.Size(112, 24);
             this.firstFriday.TabIndex = 1;
             this.firstFriday.Tag = "Friday";
             this.firstFriday.Text = "First Friday";
@@ -184,48 +198,66 @@
             // 
             this.move.AutoSize = true;
             this.move.Enabled = false;
-            this.move.Location = new System.Drawing.Point(44, 205);
+            this.move.Location = new System.Drawing.Point(66, 336);
+            this.move.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.move.Name = "move";
-            this.move.Size = new System.Drawing.Size(94, 17);
+            this.move.Size = new System.Drawing.Size(281, 24);
             this.move.TabIndex = 2;
-            this.move.Text = "Move to Inbox";
+            this.move.Text = "Move to Inbox (Hold shift to toggle)";
             this.move.UseVisualStyleBackColor = true;
             this.move.CheckedChanged += new System.EventHandler(this.move_CheckedChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 9);
+            this.label1.Location = new System.Drawing.Point(62, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.Size = new System.Drawing.Size(67, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Subject:";
             // 
             // subjectText
             // 
             this.subjectText.AutoSize = true;
-            this.subjectText.Location = new System.Drawing.Point(52, 31);
+            this.subjectText.Location = new System.Drawing.Point(78, 48);
+            this.subjectText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.subjectText.Name = "subjectText";
-            this.subjectText.Size = new System.Drawing.Size(35, 13);
+            this.subjectText.Size = new System.Drawing.Size(51, 20);
             this.subjectText.TabIndex = 4;
             this.subjectText.Text = "label2";
             // 
             // addReminder
             // 
             this.addReminder.AutoSize = true;
-            this.addReminder.Location = new System.Drawing.Point(44, 229);
+            this.addReminder.Location = new System.Drawing.Point(66, 373);
+            this.addReminder.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.addReminder.Name = "addReminder";
-            this.addReminder.Size = new System.Drawing.Size(124, 17);
+            this.addReminder.Size = new System.Drawing.Size(183, 24);
             this.addReminder.TabIndex = 5;
             this.addReminder.Text = "Add reminder at 9:00";
             this.addReminder.UseVisualStyleBackColor = true;
             // 
+            // laterToday
+            // 
+            this.laterToday.AutoSize = true;
+            this.laterToday.Location = new System.Drawing.Point(66, 122);
+            this.laterToday.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.laterToday.Name = "laterToday";
+            this.laterToday.Size = new System.Drawing.Size(114, 24);
+            this.laterToday.TabIndex = 6;
+            this.laterToday.Tag = "0";
+            this.laterToday.Text = "Later today";
+            this.laterToday.UseVisualStyleBackColor = true;
+            this.laterToday.CheckedChanged += new System.EventHandler(this.laterToday_CheckedChanged);
+            // 
             // FollowUpForm
             // 
             this.AcceptButton = this.flag;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(320, 314);
+            this.ClientSize = new System.Drawing.Size(478, 494);
+            this.Controls.Add(this.laterToday);
             this.Controls.Add(this.addReminder);
             this.Controls.Add(this.subjectText);
             this.Controls.Add(this.label1);
@@ -243,6 +275,7 @@
             this.Controls.Add(this.none);
             this.Controls.Add(this.flag);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FollowUpForm";
@@ -271,5 +304,6 @@
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label subjectText;
         public System.Windows.Forms.CheckBox addReminder;
+        public System.Windows.Forms.RadioButton laterToday;
     }
 }

@@ -22,5 +22,41 @@ namespace TheGreatFollowUpper.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool DefaultMoveToInbox {
+            get {
+                return ((bool)(this["DefaultMoveToInbox"]));
+            }
+            set {
+                this["DefaultMoveToInbox"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("09:00:00")]
+        public global::System.TimeSpan DefaultOtherDayReminder {
+            get {
+                return ((global::System.TimeSpan)(this["DefaultOtherDayReminder"]));
+            }
+            set {
+                this["DefaultOtherDayReminder"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("18:00:00")]
+        public global::System.TimeSpan DefaultSameDayReminder {
+            get {
+                return ((global::System.TimeSpan)(this["DefaultSameDayReminder"]));
+            }
+            set {
+                this["DefaultSameDayReminder"] = value;
+            }
+        }
     }
 }
