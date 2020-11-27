@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Forms;
-using Newtonsoft.Json.Linq;
 using TheGreatFollowUpper.Extensions;
 using TheGreatFollowUpper.Properties;
 using TheGreatFollowUpper.Util;
@@ -9,6 +8,7 @@ using Outlook = Microsoft.Office.Interop.Outlook;
 using System.Collections.Generic;
 using System.Globalization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace TheGreatFollowUpper.Views
 {
