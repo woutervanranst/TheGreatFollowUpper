@@ -33,9 +33,17 @@ Alternate options, if you're out of luck:
 
 ## Leveraging Outlook's Native Capabilities
 
-### Sidebar
+### Categories
 
-The sidebar sits at the side of the Outlook window, and can list the flagged items.
+The Great FollowUpper re-uses the existing Outlook categories.
+
+<p align="center">
+<img src="docs/categories.png" width="400px">
+</p>
+
+### To-Do Bar
+
+The To-Do bar sits at the side of the Outlook window, and can list the flagged items.
 
 <p align="center">
 <img src="docs/outlook-window.png" width="400px">
@@ -60,6 +68,25 @@ To configure this:
 
 
 ## Settings
+
+The settings dialog can be accessed through the main window.
+
+<p align="center">
+<img src="docs/settings.png" width="400px">
+</p>
+
+
+
+| Setting | Description | Why? |
+| - | - | - |
+| DoTaskDump | Make a dump of all active tasks in the Documents folder each time Outlook starts. | Useful if you accidentally rename a task.
+| IgnoreSentItemsBeforeHours | Ignore mails that were sent -x hours ago (eg. from your mobile phone). VALUE MUST BE NEGATIVE. | If you send mails from mobile at night, you don't want 20 pop-ups for all sent items the next day.
+| AutoCloseFormAfterSeconds | Close pop-up automatically after x seconds. Use 0 to disable autoclose.
+| DefaultClearFlagOnReply | Default value of the 'Clear Flag On Reply' checkbox
+| DefaultMoveToInbox | Default value of the 'Move to Inbox' checkbox".
+| DefaultOtherDayReminder | Default value for the reminder
+| DefaultSameDayReminder | Reminder time for reminders that are to be followed up 'Later today'" | Because you don't want a reminder at 8:30 if it's already noon (Special feature for @PieterH)
+| SupressCancelDialogSeconds | Disable the Cancel (close main window) button during the first few seconds | Suppress accidental pressing on of the Cancel button. NEGATIVE VALUE. (Special feature for @NicolasVBD)
 
 ## Advanced Features
 
