@@ -10,9 +10,9 @@ When you send a mail that will require follow up, the following pop-up is shown,
 
 Additionally, it adds extensions to the context menu of an Email, Appointment and RSS Item for shortcuts.
 
-<center>
+<div style="text-align:center">
 <img src="docs/contextmenu.png" width="150px">
-</center>
+</div>
 
 ## Installation
 
@@ -20,9 +20,9 @@ Installation can be tricky (as I do not have a trusted certificate to sign the p
 
 1. Download the [Trust Prompt Tool](https://www.smartlux.com/software/trust-prompt-tool/), and Enable all prompts (Read from registry > click Enable on all dropdowns > Write to registry). When installing applications from unknown publishers (like me) it will _prompt_ you, instead of flat out refusing to install. Like this:
 
-<center>
+<div style="text-align:center">
 <img src="https://www.smartlux.com/wp-content/uploads/2018/10/Trust-Prompt-do-you-want-to-install-this-application.png" width="400px">
-</center>
+</div>
 
 2. Download the ZIP of the [latest release](https://github.com/woutervanranst/TheGreatFollowUpper/releases/latest), extract the ZIP, double click the setup.exe file.
 
