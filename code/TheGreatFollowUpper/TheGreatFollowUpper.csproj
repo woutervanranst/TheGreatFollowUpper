@@ -257,6 +257,7 @@
       <DependentUpon>GreatFollowUpperAddin.Designer.xml</DependentUpon>
     </Compile>
     <AppDesigner Include="Properties\" />
+    <None Include="README.MD" />
     <None Include="TheGreatFollowUpper_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -281,7 +282,7 @@
     <ManifestKeyFile>TheGreatFollowUpper_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>71911F080371DC24EC2473DFAAB403DFBAE0455D</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>44B456D0B66A7535218C19B218237A95970E069F</ManifestCertificateThumbprint>
   </PropertyGroup>
   <!-- Include the build rules for a C# project. -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
