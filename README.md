@@ -8,9 +8,9 @@ When you send a mail that will require follow up, the following pop-up is shown,
 
 ![Main Window](docs/mainwindow.png)
 
-Additionally, 
+Additionally, it adds extensions to the context menu of an Email, Appointment and RSS Item for shortcuts.
 
-![Main Window](docs/contextmenu.png =100x10)
+<img src="docs/contextmenu.png" width="20%">
 
 ## Installation
 
@@ -19,3 +19,10 @@ https://docs.microsoft.com/en-us/visualstudio/vsto/how-to-configure-inclusion-li
 
 Others:
 there is an app for the trust prompt
+
+
+## Settings
+
+## Advanced Features
+
+* Use CTRL+Click on the Context Menu to open the main window
