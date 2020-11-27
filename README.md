@@ -20,9 +20,9 @@ Installation can be tricky (as I do not have a trusted certificate to sign the p
 
 1. Download the [Trust Prompt Tool](https://www.smartlux.com/software/trust-prompt-tool/), and Enable all prompts (Read from registry > click Enable on all dropdowns > Write to registry). When installing applications from unknown publishers (like me) it will _prompt_ you, instead of flat out refusing to install. Like this:
 
-<div style="text-align:center">
+<p align="center">
 <img src="https://www.smartlux.com/wp-content/uploads/2018/10/Trust-Prompt-do-you-want-to-install-this-application.png" width="400px">
-</div>
+</p>
 
 2. Download the ZIP of the [latest release](https://github.com/woutervanranst/TheGreatFollowUpper/releases/latest), extract the ZIP, double click the setup.exe file.
 
@@ -30,6 +30,19 @@ Alternate options, if you're out of luck:
 * https://stackoverflow.com/a/45468516/1582323
 * https://stackoverflow.com/a/61909573/1582323 with the certificate found under /code/TheGreatFollowUpper/TheGreatFollowUpper_TemporaryKey.pfx
 * https://docs.microsoft.com/en-us/visualstudio/vsto/how-to-configure-inclusion-list-security?view=vs-2019#enable-the-inclusion-list
+
+## Leveraging Outlook's Native Capabilities
+
+### Sidebar
+
+<p align="center">
+<img src="docs/sidebar.png" width="400px">
+</p>
+
+<p align="center">
+<img src="docs/sidebar-settings.png" width="400px">
+</p>
+
 
 
 ## Settings
