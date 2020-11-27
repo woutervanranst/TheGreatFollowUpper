@@ -10,9 +10,9 @@ When you send a mail that will require follow up, the following pop-up is shown,
 
 Additionally, it adds extensions to the context menu of an Email, Appointment and RSS Item for shortcuts.
 
-<div style="text-align:center">
+<p align="center">
 <img src="docs/contextmenu.png" width="150px">
-</div>
+</p>
 
 ## Installation
 
@@ -35,12 +35,26 @@ Alternate options, if you're out of luck:
 
 ### Sidebar
 
-<p align="center">
-<img src="docs/sidebar.png" width="400px">
-</p>
+The sidebar sits at the side of the Outlook window, and can list the flagged items.
 
 <p align="center">
-<img src="docs/sidebar-settings.png" width="400px">
+<img src="docs/outlook-window.png" width="400px">
+</p>
+
+It can be made to list the flagged items per date and per category:
+
+<p align="center">
+<img src="docs/todo-bar.png" width="400px">
+</p>
+
+To configure this:
+
+1. Go to View -> To-Do Bar -> check 'Tasks'
+2. Right-click on the To-Do Bar header, click "View Settings"
+3. Set "Group By" to "Due Date", then by "Categories"
+
+<p align="center">
+<img src="docs/todo-bar-settings.png" width="400px">
 </p>
 
 
