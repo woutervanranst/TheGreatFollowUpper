@@ -1,4 +1,4 @@
-﻿namespace TheGreatFollowUpper
+﻿namespace TheGreatFollowUpper.Views
 {
     partial class ColoredCheckedListBox
     {

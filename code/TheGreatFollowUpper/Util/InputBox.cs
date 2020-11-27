@@ -2,7 +2,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace TheGreatFollowUpper
+namespace TheGreatFollowUpper.Util
 {
 
 	#region InputBox return result
@@ -114,6 +114,7 @@ namespace TheGreatFollowUpper
 			frmInputDialog.MaximizeBox = false;
 			frmInputDialog.MinimizeBox = false;
 			frmInputDialog.Name = "InputBoxDialog";
+		    frmInputDialog.ShowInTaskbar = false;
 			frmInputDialog.ResumeLayout(false);
 		}
 

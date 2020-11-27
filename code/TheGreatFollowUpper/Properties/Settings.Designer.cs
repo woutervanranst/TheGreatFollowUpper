@@ -12,7 +12,7 @@ namespace TheGreatFollowUpper.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.0.1.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -61,13 +61,85 @@ namespace TheGreatFollowUpper.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("[\"822c4baaba38162992e2a054f4da03a3\",\"20599363c00c20dea8ee1cfdcb1a90e9\"]")]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"[""822c4baaba38162992e2a054f4da03a3"",""20599363c00c20dea8ee1cfdcb1a90e9"",""4bd2bc3a31d7bc0cf514c7c77bab9b31"",""9d197e938ac252d7ec537b348bd191bc"",""3b946df7f73c1dd749cf09d1878e4004"",""ac4dd429914363804b355575f4c1d976"",""78c9cc4dcb6cdad77b904d0980d901c9"",""f3b532ce159f09aae1ab7a385fdb078e""]")]
         public string Licenses {
             get {
                 return ((string)(this["Licenses"]));
             }
             set {
                 this["Licenses"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("-4")]
+        public int IgnoreSentItemsBeforeHours {
+            get {
+                return ((int)(this["IgnoreSentItemsBeforeHours"]));
+            }
+            set {
+                this["IgnoreSentItemsBeforeHours"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("60")]
+        public int AutoCloseFormAfterSeconds {
+            get {
+                return ((int)(this["AutoCloseFormAfterSeconds"]));
+            }
+            set {
+                this["AutoCloseFormAfterSeconds"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool DefaultClearFlagOnReply {
+            get {
+                return ((bool)(this["DefaultClearFlagOnReply"]));
+            }
+            set {
+                this["DefaultClearFlagOnReply"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool DoTaskDump {
+            get {
+                return ((bool)(this["DoTaskDump"]));
+            }
+            set {
+                this["DoTaskDump"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("[\"Follow up\", \"Waiting For\", \"Do\"]")]
+        public string FlagRequests {
+            get {
+                return ((string)(this["FlagRequests"]));
+            }
+            set {
+                this["FlagRequests"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool FlagRequestsLoaded {
+            get {
+                return ((bool)(this["FlagRequestsLoaded"]));
+            }
+            set {
+                this["FlagRequestsLoaded"] = value;
             }
         }
     }

@@ -35,10 +35,10 @@
     <SccProvider>SAK</SccProvider>
     <IsWebBootstrapper>False</IsWebBootstrapper>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <PublishUrl>C:\Users\woute\Desktop\TGF4\</PublishUrl>
+    <PublishUrl>\\Mac\Home\Desktop\TGF\TGF8\</PublishUrl>
     <InstallUrl />
     <TargetCulture>en</TargetCulture>
-    <ApplicationVersion>1.0.2.5</ApplicationVersion>
+    <ApplicationVersion>1.0.2.8</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
@@ -191,27 +191,37 @@
     can be found.
   -->
   <ItemGroup>
-    <Compile Include="CategoryPA.cs" />
-    <Compile Include="ColoredCheckedListBox.cs">
+    <Compile Include="Extensions\FollowUpMailItem.cs" />
+    <Compile Include="Extensions\FollowUpTaskItem.cs" />
+    <Compile Include="Views\ColoredCheckedListBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ColoredCheckedListBox.Designer.cs">
+    <Compile Include="Views\ColoredCheckedListBox.Designer.cs">
       <DependentUpon>ColoredCheckedListBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="InputBox.cs" />
+    <Compile Include="Extensions\FollowUpItem.cs" />
+    <Compile Include="Util\Utils.cs" />
+    <Compile Include="Util\InputBox.cs" />
     <Compile Include="License.cs" />
-    <Compile Include="MailItemExtensions.cs" />
-    <Compile Include="FollowUpForm.cs">
+    <Compile Include="Util\Linqqer.cs" />
+    <Compile Include="Extensions\MailItemExtensions.cs" />
+    <Compile Include="Views\FollowUpForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FollowUpForm.Designer.cs">
+    <Compile Include="Views\FollowUpForm.Designer.cs">
       <DependentUpon>FollowUpForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Helper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <EmbeddedResource Include="FollowUpForm.resx">
+    <Compile Include="Views\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskDumper.cs" />
+    <EmbeddedResource Include="Views\FollowUpForm.resx">
       <DependentUpon>FollowUpForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -224,7 +234,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="app.config" />
+    <EmbeddedResource Include="Views\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -255,6 +270,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="UpdateToDoBarView.cs" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

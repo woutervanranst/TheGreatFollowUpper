@@ -6,6 +6,10 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
+using Microsoft.CSharp.RuntimeBinder;
+using TheGreatFollowUpper.Extensions;
+using TheGreatFollowUpper.Util;
+using TheGreatFollowUpper.Views;
 using Office = Microsoft.Office.Core;
 using Outlook = Microsoft.Office.Interop.Outlook;
 
@@ -83,35 +87,32 @@ namespace TheGreatFollowUpper
                 return;
 
             var explorer = Globals.GreatFollowUpperAddin.Application.ActiveExplorer();
-            if (explorer?.Selection == null || explorer.Selection.Count <= 0)
+            if (explorer?.Selection == null || explorer.Selection.Count != 1)
                 return;
 
-            if (explorer.Selection.Count > 1)
-                return;
-
-            var item = explorer.Selection[1];
-            if (!(item is Outlook.MailItem))
+            FollowUpItem item;
+            try
             {
-                MessageBox.Show(@"Type of selected item not supported", GreatFollowUpperAddin.Name, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                item = FollowUpItem.GetFollowUpItem(explorer.Selection[1]);
+            }
+            catch (RuntimeBinderException)
+            {
+                MessageBox.Show("Type of selected item not supported", GreatFollowUpperAddin.Name, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
-            var mail = (Outlook.MailItem)item;
+            //var mail = (Outlook.MailItem)item;
 
             if (Control.ModifierKeys == Keys.Shift)
             {
-                var fupf = new FollowUpForm(mail, sender.Tag);
+                var fupf = new FollowUpForm(item, FollowUpItem.FollowUpTrigger.Ribbon, sender.Tag);
                 fupf.Show();
             }
             else
             {
-                DateTime? followUpDate = MailItemExtensions.ParseFollowUpDate(sender.Tag);
-                mail.TreatOutgoing(true, followUpDate, false, false, false, false, null);
+                DateTime? followUpDate = Utils.ParseFollowUpDate(sender.Tag);
+                item.DoFollowUp(true, followUpDate, false, item.ReminderSet, false, false);
             }
-            
-            //var x = CategoryPA.InvokeRequestResponseService(mail).Result;
-
-            //Helper.GetConversationInformation(mail);
         }
 
         #endregion

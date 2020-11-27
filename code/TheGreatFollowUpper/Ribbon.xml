@@ -25,6 +25,7 @@
 
   <contextMenus>
     <contextMenu idMso="ContextMenuQuickFlags">
+      <button id="latertoday" label="Later today"        tag="0"      onAction="TaskContext_Click"/>
       <button id="in1day"     label="In 1 business day"  tag="1"      onAction="TaskContext_Click"/>
       <button id="in2days"    label="In 2 business days" tag="2"      onAction="TaskContext_Click"/>
       <button id="in3days"    label="In 3 business days" tag="3"      onAction="TaskContext_Click"/>
