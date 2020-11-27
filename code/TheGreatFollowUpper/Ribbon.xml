@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
+
+
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" 
+          onLoad="Ribbon_Load">
   <!--<ribbon>
     <tabs>
       <tab idMso="TabMail">  --><!--http://stackoverflow.com/questions/24247405/outlook-addin-home-tab-with-custom-button--><!--
@@ -22,17 +25,17 @@
 
   <contextMenus>
     <contextMenu idMso="ContextMenuQuickFlags">
-      <button id="in1day" label="In 1 business day"   tag="1" onAction="TaskContext_Click"/>
-      <button id="in2days" label="In 2 business days" tag="2" onAction="TaskContext_Click"/>
-      <button id="in3days" label="In 3 business days" tag="3" onAction="TaskContext_Click"/>
-      <button id="in4days" label="In 4 business days" tag="4" onAction="TaskContext_Click"/>
-      <button id="in5days" label="In 5 business days" tag="5" onAction="TaskContext_Click"/>
+      <button id="in1day"     label="In 1 business day"  tag="1"      onAction="TaskContext_Click"/>
+      <button id="in2days"    label="In 2 business days" tag="2"      onAction="TaskContext_Click"/>
+      <button id="in3days"    label="In 3 business days" tag="3"      onAction="TaskContext_Click"/>
+      <button id="in4days"    label="In 4 business days" tag="4"      onAction="TaskContext_Click"/>
+      <button id="in5days"    label="In 5 business days" tag="5"      onAction="TaskContext_Click"/>
       
-      <button id="monday" label="Next Monday" tag="Monday" onAction="TaskContext_Click"/>
-      <button id="tuesday" label="Next Tuesday" tag="Tuesday" onAction="TaskContext_Click"/>
-      <button id="wednesday" label="Next Wednesday" tag="Wednesday" onAction="TaskContext_Click"/>
-      <button id="thursday" label="Next Thursday" tag="Thursday" onAction="TaskContext_Click"/>
-      <button id="friday" label="Next Friday" tag="Friday" onAction="TaskContext_Click"/>
+      <button id="monday"     label="Next Monday"       tag="Monday"    onAction="TaskContext_Click"/>
+      <button id="tuesday"    label="Next Tuesday"      tag="Tuesday"   onAction="TaskContext_Click"/>
+      <button id="wednesday"  label="Next Wednesday"    tag="Wednesday" onAction="TaskContext_Click"/>
+      <button id="thursday"   label="Next Thursday"     tag="Thursday"  onAction="TaskContext_Click"/>
+      <button id="friday"     label="Next Friday"       tag="Friday"    onAction="TaskContext_Click"/>
       
     </contextMenu>
   </contextMenus>

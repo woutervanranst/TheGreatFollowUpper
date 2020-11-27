@@ -26,7 +26,7 @@
     <OutputType>Library</OutputType>
     <NoStandardLibraries>false</NoStandardLibraries>
     <RootNamespace>TheGreatFollowUpper</RootNamespace>
-    <AssemblyName>TheGreatFollowUpper</AssemblyName>
+    <AssemblyName>The Great FollowUpper</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <DefineConstants>VSTO40</DefineConstants>
     <SccProjectName>SAK</SccProjectName>
@@ -35,18 +35,18 @@
     <SccProvider>SAK</SccProvider>
     <IsWebBootstrapper>False</IsWebBootstrapper>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <PublishUrl>\\Mac\Home\Desktop\TGF\</PublishUrl>
+    <PublishUrl>C:\Users\woute\Desktop\TGF4\</PublishUrl>
     <InstallUrl />
     <TargetCulture>en</TargetCulture>
-    <ApplicationVersion>1.0.1.2</ApplicationVersion>
+    <ApplicationVersion>1.0.2.5</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>days</UpdateIntervalUnits>
-    <ProductName>TheGreatFollowUpper</ProductName>
-    <PublisherName />
+    <ProductName>The Great FollowUpper</ProductName>
+    <PublisherName>Wouter Van Ranst</PublisherName>
     <SupportUrl />
-    <FriendlyName>TheGreatFollowUpper</FriendlyName>
+    <FriendlyName>The Great FollowUpper</FriendlyName>
     <OfficeApplicationDescription />
     <LoadBehavior>3</LoadBehavior>
   </PropertyGroup>
@@ -133,9 +133,18 @@
   -->
   <ItemGroup>
     <Reference Include="Accessibility" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -182,6 +191,16 @@
     can be found.
   -->
   <ItemGroup>
+    <Compile Include="CategoryPA.cs" />
+    <Compile Include="ColoredCheckedListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ColoredCheckedListBox.Designer.cs">
+      <DependentUpon>ColoredCheckedListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputBox.cs" />
+    <Compile Include="License.cs" />
+    <Compile Include="MailItemExtensions.cs" />
     <Compile Include="FollowUpForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,8 +222,10 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -232,6 +253,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -255,7 +279,7 @@
       <FlavorProperties GUID="{BAA0C2D2-18E2-41B9-852F-F413020CAA33}">
         <ProjectProperties HostName="Outlook" HostPackage="{29A7B9D7-A7F1-4328-8EF0-6B2D1A56B2C1}" OfficeVersion="15.0" VstxVersion="4.0" ApplicationType="Outlook" Language="cs" TemplatesPath="" DebugInfoExeName="#Software\Microsoft\Office\16.0\Outlook\InstallRoot\Path#outlook.exe" AddItemTemplatesGuid="{A58A78EB-1C92-4DDD-80CF-E8BD872ABFC4}" />
         <Host Name="Outlook" GeneratedCodeNamespace="TheGreatFollowUpper" PublishedHash="69C324AB27932AA2FBF2B7EA72250886FF164DE6" IconIndex="0">
-          <HostItem Name="ThisAddIn" Code="GreatFollowUpperAddin.cs" CanonicalName="AddIn" CanActivate="false" IconIndex="1" Blueprint="GreatFollowUpperAddin.Designer.xml" GeneratedCode="GreatFollowUpperAddin.Designer.cs" PublishedHash="175E9268213BF36F9192233ADC14834345ABA1EA" />
+          <HostItem Name="ThisAddIn" Code="GreatFollowUpperAddin.cs" CanonicalName="AddIn" PublishedHash="175E9268213BF36F9192233ADC14834345ABA1EA" CanActivate="false" IconIndex="1" Blueprint="GreatFollowUpperAddin.Designer.xml" GeneratedCode="GreatFollowUpperAddin.Designer.cs" />
         </Host>
       </FlavorProperties>
     </VisualStudio>

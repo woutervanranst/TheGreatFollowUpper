@@ -6,10 +6,13 @@
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="DefaultOtherDayReminder" Type="System.TimeSpan" Scope="User">
-      <Value Profile="(Default)">09:00:00</Value>
+      <Value Profile="(Default)">08:30:00</Value>
     </Setting>
     <Setting Name="DefaultSameDayReminder" Type="System.TimeSpan" Scope="User">
       <Value Profile="(Default)">18:00:00</Value>
+    </Setting>
+    <Setting Name="Licenses" Type="System.String" Scope="User">
+      <Value Profile="(Default)">["822c4baaba38162992e2a054f4da03a3","20599363c00c20dea8ee1cfdcb1a90e9"]</Value>
     </Setting>
   </Settings>
 </SettingsFile>

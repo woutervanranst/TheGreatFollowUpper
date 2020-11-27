@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Windows.Forms;
 using Office = Microsoft.Office.Core;
 using Outlook = Microsoft.Office.Interop.Outlook;
 
@@ -32,11 +33,11 @@ namespace TheGreatFollowUpper
     [ComVisible(true)]
     public class Ribbon : Office.IRibbonExtensibility
     {
-        private Office.IRibbonUI ribbon;
+        //private Office.IRibbonUI ribbon;
 
-        public Ribbon()
-        {
-        }
+        //public Ribbon()
+        //{
+        //}
 
         #region IRibbonExtensibility Members
 
@@ -44,56 +45,11 @@ namespace TheGreatFollowUpper
         {
             return GetResourceText("TheGreatFollowUpper.Ribbon.xml");
         }
-
-        #endregion
-
-        #region Ribbon Callbacks
-        //Create callback methods here. For more information about adding callback methods, visit http://go.microsoft.com/fwlink/?LinkID=271226
-
-        public void Ribbon_Load(Office.IRibbonUI ribbonUI)
-        {
-            this.ribbon = ribbonUI;
-        }
-
-        public void TaskContext_Click(dynamic sender)
-        {
-            var explorer =  Globals.GreatFollowUpperAddin.Application.ActiveExplorer();
-            if (explorer != null && explorer.Selection != null && explorer.Selection.Count > 0)
-            {
-                object item = explorer.Selection[1];
-                if (item is Outlook.MailItem)
-                {
-                    var mail = item as Outlook.MailItem;
-
-                    Helper.Flag(mail, sender.Tag);
-
-                    Helper.GetConversationInformation(mail);
-
-                    //int businessDays;
-                    //if (int.TryParse(sender.Tag, out businessDays))
-                    //{
-                    //    //Number of business days
-                    //    Helper.SetFlagBusinessDays(mail, businessDays);
-                    //}
-                    //else
-                    //{
-                    //    DayOfWeek day;
-                    //    if (Enum.TryParse<DayOfWeek>(sender.Tag, out day))
-                    //    {
-                    //        //Weekday
-                    //        Helper.SetFlagWeekday(mail, day);
-                    //    }
-                    //}
-                }
-            }
-        }
-
-        #endregion
-
-        #region Helpers
-
         private static string GetResourceText(string resourceName)
         {
+            //if (!License.IsLicenseValid())
+            //    return null;
+
             Assembly asm = Assembly.GetExecutingAssembly();
             string[] resourceNames = asm.GetManifestResourceNames();
             for (int i = 0; i < resourceNames.Length; ++i)
@@ -110,6 +66,52 @@ namespace TheGreatFollowUpper
                 }
             }
             return null;
+        }
+        #endregion
+
+        #region Ribbon Callbacks
+        //Create callback methods here. For more information about adding callback methods, visit http://go.microsoft.com/fwlink/?LinkID=271226
+
+        //public void Ribbon_Load(Office.IRibbonUI ribbonUI)
+        //{
+        //    this.ribbon = ribbonUI;
+        //}
+
+        public void TaskContext_Click(dynamic sender)
+        {
+            if (!License.IsLicenseValid())
+                return;
+
+            var explorer = Globals.GreatFollowUpperAddin.Application.ActiveExplorer();
+            if (explorer?.Selection == null || explorer.Selection.Count <= 0)
+                return;
+
+            if (explorer.Selection.Count > 1)
+                return;
+
+            var item = explorer.Selection[1];
+            if (!(item is Outlook.MailItem))
+            {
+                MessageBox.Show(@"Type of selected item not supported", GreatFollowUpperAddin.Name, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            var mail = (Outlook.MailItem)item;
+
+            if (Control.ModifierKeys == Keys.Shift)
+            {
+                var fupf = new FollowUpForm(mail, sender.Tag);
+                fupf.Show();
+            }
+            else
+            {
+                DateTime? followUpDate = MailItemExtensions.ParseFollowUpDate(sender.Tag);
+                mail.TreatOutgoing(true, followUpDate, false, false, false, false, null);
+            }
+            
+            //var x = CategoryPA.InvokeRequestResponseService(mail).Result;
+
+            //Helper.GetConversationInformation(mail);
         }
 
         #endregion

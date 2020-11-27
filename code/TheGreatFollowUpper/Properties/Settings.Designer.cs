@@ -37,7 +37,7 @@ namespace TheGreatFollowUpper.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("09:00:00")]
+        [global::System.Configuration.DefaultSettingValueAttribute("08:30:00")]
         public global::System.TimeSpan DefaultOtherDayReminder {
             get {
                 return ((global::System.TimeSpan)(this["DefaultOtherDayReminder"]));
@@ -56,6 +56,18 @@ namespace TheGreatFollowUpper.Properties {
             }
             set {
                 this["DefaultSameDayReminder"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("[\"822c4baaba38162992e2a054f4da03a3\",\"20599363c00c20dea8ee1cfdcb1a90e9\"]")]
+        public string Licenses {
+            get {
+                return ((string)(this["Licenses"]));
+            }
+            set {
+                this["Licenses"] = value;
             }
         }
     }
