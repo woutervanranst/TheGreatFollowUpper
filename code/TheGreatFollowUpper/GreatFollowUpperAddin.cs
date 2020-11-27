@@ -154,7 +154,7 @@ namespace TheGreatFollowUpper
     
         private static void HandleError(Exception e)
         {
-            MessageBox.Show($"Whoops... There was an error! Please send this to wouter.van.ranst@accenture.com:\n\n{e}", GreatFollowUpperAddin.Name, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show($"Whoops... There was an error! Please send this to wouter.vanranst@gmail.com:\n\n{e}", GreatFollowUpperAddin.Name, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
 

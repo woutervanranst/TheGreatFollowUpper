@@ -35,10 +35,10 @@
     <SccProvider>SAK</SccProvider>
     <IsWebBootstrapper>False</IsWebBootstrapper>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <PublishUrl>\\Mac\Home\Desktop\TGF\TGF8\</PublishUrl>
+    <PublishUrl>C:\Users\wovanran\Desktop\TGF\TGF13\</PublishUrl>
     <InstallUrl />
     <TargetCulture>en</TargetCulture>
-    <ApplicationVersion>1.0.2.8</ApplicationVersion>
+    <ApplicationVersion>1.0.2.10</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
@@ -133,8 +133,8 @@
   -->
   <ItemGroup>
     <Reference Include="Accessibility" />
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -187,6 +187,7 @@
   -->
   <ItemGroup>
     <Compile Include="Extensions\FollowUpMailItem.cs" />
+    <Compile Include="Extensions\FollowUpPostItem.cs" />
     <Compile Include="Extensions\FollowUpTaskItem.cs" />
     <Compile Include="Views\ColoredCheckedListBox.cs">
       <SubType>Component</SubType>
@@ -249,7 +250,6 @@
     <Compile Include="GreatFollowUpperAddin.cs">
       <SubType>Code</SubType>
     </Compile>
-    <None Include="TheGreatFollowUpper_TemporaryKey.pfx" />
     <None Include="GreatFollowUpperAddin.Designer.xml">
       <DependentUpon>GreatFollowUpperAddin.cs</DependentUpon>
     </None>
@@ -257,6 +257,7 @@
       <DependentUpon>GreatFollowUpperAddin.Designer.xml</DependentUpon>
     </Compile>
     <AppDesigner Include="Properties\" />
+    <None Include="TheGreatFollowUpper_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Ribbon.xml">
@@ -280,7 +281,7 @@
     <ManifestKeyFile>TheGreatFollowUpper_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>E46DABCF23836534C349603324A9E5995CABB7B8</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>71911F080371DC24EC2473DFAAB403DFBAE0455D</ManifestCertificateThumbprint>
   </PropertyGroup>
   <!-- Include the build rules for a C# project. -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

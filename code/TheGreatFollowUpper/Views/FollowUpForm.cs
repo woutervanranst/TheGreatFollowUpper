@@ -7,8 +7,6 @@ using TheGreatFollowUpper.Util;
 using Outlook = Microsoft.Office.Interop.Outlook;
 using System.Collections.Generic;
 using System.Globalization;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace TheGreatFollowUpper.Views
 {
@@ -63,13 +61,10 @@ namespace TheGreatFollowUpper.Views
             }
 
 
-            //Status GROUPBOX
-            IEnumerable<string> frs = JArray.Parse(Settings.Default.FlagRequests).ToObject<string[]>();
-            if (item.FlagRequest != null)
-                frs = frs.Union(new string[] {item.FlagRequest});
-            lstFlagRequests.Items.AddRange(frs.ToArray());
-            lstFlagRequests.SelectedItem = item.FlagRequest;
-
+            ////Status GROUPBOX
+            //IEnumerable<string> frs = JArray.Parse(Settings.Default.FlagRequests).ToObject<string[]>();
+            //if (item.FlagRequest != null)
+            //    frs = frs.Union(new string[] {item.FlagRequest});
 
             //Auto Close Timer
             if (Settings.Default.AutoCloseFormAfterSeconds > 0)
@@ -118,7 +113,7 @@ namespace TheGreatFollowUpper.Views
 
             DateTime? flagDate = null;
             if (AddFlag)
-                flagDate = Utils.ParseFollowUpDate(FollowUpValue);
+                flagDate = Utils.ParseFollowUpDate(FollowUpValue, dtpCustom.Value);
             if (AddReminder)
             {
                 var rtt = reminderTime.Text;
@@ -134,7 +129,7 @@ namespace TheGreatFollowUpper.Views
 
             var categories = string.Join("; ", this.lstCategories.CheckedItems.Cast<string>());
 
-            _item.DoFollowUp(AddFlag, flagDate, clearFlagOnReply.Checked, AddReminder, MoveToInbox, true, lstFlagRequests.SelectedItem?.ToString(), categories);
+            _item.DoFollowUp(AddFlag, flagDate, clearFlagOnReply.Checked, AddReminder, MoveToInbox, true, categories: categories);
 
             Close();
         }
@@ -155,7 +150,9 @@ namespace TheGreatFollowUpper.Views
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            Close();
+            //if(...) added for for Nicolas: disable accidentally closing the form when it just pops up
+            if (_remainingSecondsBeforeOkClick < Settings.Default.AutoCloseFormAfterSeconds + Settings.Default.SupressCancelDialogSeconds) 
+                Close();
         }
 
         private void FollowUpForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -239,46 +236,9 @@ namespace TheGreatFollowUpper.Views
 
         #endregion
 
-        #region FlagRequest GROUPBOX
-
-        private void btnClearFlagRequest_Click(object sender, EventArgs e)
+        private void dtpCustom_ValueChanged(object sender, EventArgs e)
         {
-            lstFlagRequests.ClearSelected();
+            inCustom.Checked = true;
         }
-
-        private void btnNewFlagRequest_Click(object sender, EventArgs e)
-        {
-            var r = InputBox.Show("Name?", $"{GreatFollowUpperAddin.Name} - Add New Status");
-
-            if (r.ReturnCode != DialogResult.OK)
-                return;
-
-            //Add to FlagRequests in settings
-            var frs = JArray.Parse(Settings.Default.FlagRequests);
-            frs.Add(r.Text);
-
-            Settings.Default.FlagRequests = JsonConvert.SerializeObject(frs);
-            Settings.Default.Save();
-
-            //Add to ListBox
-            var i = lstFlagRequests.Items.Add(r.Text);
-            lstFlagRequests.SelectedItem = r.Text;
-        }
-
-        private void btnDeleteFlagRequest_Click(object sender, EventArgs e)
-        {
-            //Remove from Settings
-            var frs = JArray.Parse(Settings.Default.FlagRequests).ToList();
-            var fr = lstFlagRequests.SelectedItem?.ToString();
-            var x = frs.Remove(fr);
-
-            Settings.Default.FlagRequests = JsonConvert.SerializeObject(frs);
-            Settings.Default.Save();
-
-            //Remove from ListBox
-            lstFlagRequests.Items.Remove(lstFlagRequests.SelectedItem);
-        }
-
-        #endregion
     }
 }

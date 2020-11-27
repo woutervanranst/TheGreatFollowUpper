@@ -30,6 +30,16 @@ namespace TheGreatFollowUpper.Extensions
             return new FollowUpTaskItem(t);
         }
 
+        private static FollowUpItem GetFollowUpItemInt(Outlook.MeetingItem a)
+        {
+            return null; //moeilijk te implementeren -- FlagDate enz moeten gezet worden via mapi proptypes die ik niet vind
+        }
+
+        private static FollowUpItem GetFollowUpItemInt(Outlook.PostItem p)
+        {
+            return new FollowUpPostItem(p); 
+        }
+
         private static FollowUpItem GetFollowUpItemInt(dynamic o)
         {
             return null; //TODO: to Object, MessageClass print to debug

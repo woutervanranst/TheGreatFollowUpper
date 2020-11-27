@@ -4,10 +4,15 @@ namespace TheGreatFollowUpper.Util
 {
     internal static class Utils
     {
-        public static DateTime ParseFollowUpDate(object value)
+        public static DateTime ParseFollowUpDate(object value, DateTime? customDateTimePickerDate = null)
         {
             if (value is string)
-                value = ParseTagToType((string)value);
+            { 
+                if ((string)value == "Custom")
+                    return customDateTimePickerDate.Value.Date;
+                else
+                    value = ParseTagToType((string)value);
+            }
 
             if (value is DayOfWeek)
                 return GetNextWeekday((DayOfWeek)value);
