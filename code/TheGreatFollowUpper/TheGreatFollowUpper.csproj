@@ -198,7 +198,6 @@
     <Compile Include="Extensions\FollowUpItem.cs" />
     <Compile Include="Util\Utils.cs" />
     <Compile Include="Util\InputBox.cs" />
-    <Compile Include="License.cs" />
     <Compile Include="Util\Linqqer.cs" />
     <Compile Include="Extensions\MailItemExtensions.cs" />
     <Compile Include="Views\FollowUpForm.cs">
@@ -257,7 +256,6 @@
       <DependentUpon>GreatFollowUpperAddin.Designer.xml</DependentUpon>
     </Compile>
     <AppDesigner Include="Properties\" />
-    <None Include="README.MD" />
     <None Include="TheGreatFollowUpper_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

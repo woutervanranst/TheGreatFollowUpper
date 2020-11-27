@@ -64,9 +64,6 @@ namespace TheGreatFollowUpper
 
         public void TaskContext_Click(dynamic sender)
         {
-            if (!License.IsLicenseValid())
-                return;
-
             var explorer = Globals.GreatFollowUpperAddin.Application.ActiveExplorer();
             if (explorer?.Selection == null)
                 return;

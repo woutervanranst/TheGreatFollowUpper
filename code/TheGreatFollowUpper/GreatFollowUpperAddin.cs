@@ -41,17 +41,6 @@ namespace TheGreatFollowUpper
             System.Windows.Forms.Application.ThreadException += Application_ThreadException;
             AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
             
-            try
-            {
-                if (!License.IsLicenseValid())
-                    return;
-            }
-            catch (Exception exception)
-            {
-                HandleError(exception);
-            }
-            
-
             _inbox = InboxFolder.Items;
             _inbox.ItemAdd += Categorize;
             _inbox.ItemAdd += Inbox_ItemAdd;
