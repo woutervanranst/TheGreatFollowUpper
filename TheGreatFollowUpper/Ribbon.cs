@@ -67,6 +67,8 @@ namespace TheGreatFollowUpper
 
                     Helper.Flag(mail, sender.Tag);
 
+                    Helper.GetConversationInformation(mail);
+
                     //int businessDays;
                     //if (int.TryParse(sender.Tag, out businessDays))
                     //{

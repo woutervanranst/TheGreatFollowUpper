@@ -27,5 +27,10 @@ namespace TheGreatFollowUpper
             move.Enabled = !none.Checked;
             move.Checked = !none.Checked;
         }
+
+        private void move_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

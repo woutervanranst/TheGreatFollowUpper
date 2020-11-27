@@ -41,11 +41,14 @@
             this.firstThursday = new System.Windows.Forms.RadioButton();
             this.firstFriday = new System.Windows.Forms.RadioButton();
             this.move = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.subjectText = new System.Windows.Forms.Label();
+            this.addReminder = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // flag
             // 
-            this.flag.Location = new System.Drawing.Point(105, 212);
+            this.flag.Location = new System.Drawing.Point(109, 279);
             this.flag.Name = "flag";
             this.flag.Size = new System.Drawing.Size(75, 23);
             this.flag.TabIndex = 0;
@@ -57,7 +60,7 @@
             // 
             this.none.AutoSize = true;
             this.none.Checked = true;
-            this.none.Location = new System.Drawing.Point(38, 31);
+            this.none.Location = new System.Drawing.Point(44, 58);
             this.none.Name = "none";
             this.none.Size = new System.Drawing.Size(95, 17);
             this.none.TabIndex = 1;
@@ -70,7 +73,7 @@
             // in1day
             // 
             this.in1day.AutoSize = true;
-            this.in1day.Location = new System.Drawing.Point(38, 54);
+            this.in1day.Location = new System.Drawing.Point(44, 81);
             this.in1day.Name = "in1day";
             this.in1day.Size = new System.Drawing.Size(107, 17);
             this.in1day.TabIndex = 1;
@@ -81,7 +84,7 @@
             // in2days
             // 
             this.in2days.AutoSize = true;
-            this.in2days.Location = new System.Drawing.Point(38, 77);
+            this.in2days.Location = new System.Drawing.Point(44, 104);
             this.in2days.Name = "in2days";
             this.in2days.Size = new System.Drawing.Size(112, 17);
             this.in2days.TabIndex = 1;
@@ -92,7 +95,7 @@
             // in3days
             // 
             this.in3days.AutoSize = true;
-            this.in3days.Location = new System.Drawing.Point(38, 100);
+            this.in3days.Location = new System.Drawing.Point(44, 127);
             this.in3days.Name = "in3days";
             this.in3days.Size = new System.Drawing.Size(112, 17);
             this.in3days.TabIndex = 1;
@@ -103,7 +106,7 @@
             // in4days
             // 
             this.in4days.AutoSize = true;
-            this.in4days.Location = new System.Drawing.Point(38, 123);
+            this.in4days.Location = new System.Drawing.Point(44, 150);
             this.in4days.Name = "in4days";
             this.in4days.Size = new System.Drawing.Size(112, 17);
             this.in4days.TabIndex = 1;
@@ -114,7 +117,7 @@
             // in5days
             // 
             this.in5days.AutoSize = true;
-            this.in5days.Location = new System.Drawing.Point(38, 146);
+            this.in5days.Location = new System.Drawing.Point(44, 173);
             this.in5days.Name = "in5days";
             this.in5days.Size = new System.Drawing.Size(112, 17);
             this.in5days.TabIndex = 1;
@@ -125,7 +128,7 @@
             // firstMonday
             // 
             this.firstMonday.AutoSize = true;
-            this.firstMonday.Location = new System.Drawing.Point(166, 54);
+            this.firstMonday.Location = new System.Drawing.Point(172, 81);
             this.firstMonday.Name = "firstMonday";
             this.firstMonday.Size = new System.Drawing.Size(85, 17);
             this.firstMonday.TabIndex = 1;
@@ -136,7 +139,7 @@
             // firstTuesday
             // 
             this.firstTuesday.AutoSize = true;
-            this.firstTuesday.Location = new System.Drawing.Point(166, 77);
+            this.firstTuesday.Location = new System.Drawing.Point(172, 104);
             this.firstTuesday.Name = "firstTuesday";
             this.firstTuesday.Size = new System.Drawing.Size(88, 17);
             this.firstTuesday.TabIndex = 1;
@@ -147,7 +150,7 @@
             // firstWednesday
             // 
             this.firstWednesday.AutoSize = true;
-            this.firstWednesday.Location = new System.Drawing.Point(166, 100);
+            this.firstWednesday.Location = new System.Drawing.Point(172, 127);
             this.firstWednesday.Name = "firstWednesday";
             this.firstWednesday.Size = new System.Drawing.Size(104, 17);
             this.firstWednesday.TabIndex = 1;
@@ -158,7 +161,7 @@
             // firstThursday
             // 
             this.firstThursday.AutoSize = true;
-            this.firstThursday.Location = new System.Drawing.Point(166, 123);
+            this.firstThursday.Location = new System.Drawing.Point(172, 150);
             this.firstThursday.Name = "firstThursday";
             this.firstThursday.Size = new System.Drawing.Size(91, 17);
             this.firstThursday.TabIndex = 1;
@@ -169,7 +172,7 @@
             // firstFriday
             // 
             this.firstFriday.AutoSize = true;
-            this.firstFriday.Location = new System.Drawing.Point(166, 146);
+            this.firstFriday.Location = new System.Drawing.Point(172, 173);
             this.firstFriday.Name = "firstFriday";
             this.firstFriday.Size = new System.Drawing.Size(75, 17);
             this.firstFriday.TabIndex = 1;
@@ -181,19 +184,51 @@
             // 
             this.move.AutoSize = true;
             this.move.Enabled = false;
-            this.move.Location = new System.Drawing.Point(38, 178);
+            this.move.Location = new System.Drawing.Point(44, 205);
             this.move.Name = "move";
             this.move.Size = new System.Drawing.Size(94, 17);
             this.move.TabIndex = 2;
             this.move.Text = "Move to Inbox";
             this.move.UseVisualStyleBackColor = true;
+            this.move.CheckedChanged += new System.EventHandler(this.move_CheckedChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(41, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Subject:";
+            // 
+            // subjectText
+            // 
+            this.subjectText.AutoSize = true;
+            this.subjectText.Location = new System.Drawing.Point(52, 31);
+            this.subjectText.Name = "subjectText";
+            this.subjectText.Size = new System.Drawing.Size(35, 13);
+            this.subjectText.TabIndex = 4;
+            this.subjectText.Text = "label2";
+            // 
+            // addReminder
+            // 
+            this.addReminder.AutoSize = true;
+            this.addReminder.Location = new System.Drawing.Point(44, 229);
+            this.addReminder.Name = "addReminder";
+            this.addReminder.Size = new System.Drawing.Size(124, 17);
+            this.addReminder.TabIndex = 5;
+            this.addReminder.Text = "Add reminder at 9:00";
+            this.addReminder.UseVisualStyleBackColor = true;
             // 
             // FollowUpForm
             // 
             this.AcceptButton = this.flag;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(320, 261);
+            this.ClientSize = new System.Drawing.Size(320, 314);
+            this.Controls.Add(this.addReminder);
+            this.Controls.Add(this.subjectText);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.move);
             this.Controls.Add(this.firstFriday);
             this.Controls.Add(this.firstThursday);
@@ -233,5 +268,8 @@
         public System.Windows.Forms.RadioButton firstThursday;
         public System.Windows.Forms.RadioButton firstFriday;
         public System.Windows.Forms.CheckBox move;
+        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label subjectText;
+        public System.Windows.Forms.CheckBox addReminder;
     }
 }
