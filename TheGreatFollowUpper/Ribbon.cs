@@ -57,7 +57,7 @@ namespace TheGreatFollowUpper
 
         public void TaskContext_Click(dynamic sender)
         {
-            var explorer = Globals.ThisAddIn.Application.ActiveExplorer();
+            var explorer =  Globals.GreatFollowUpperAddin.Application.ActiveExplorer();
             if (explorer != null && explorer.Selection != null && explorer.Selection.Count > 0)
             {
                 object item = explorer.Selection[1];

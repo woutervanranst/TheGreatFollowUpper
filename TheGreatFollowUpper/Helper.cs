@@ -71,6 +71,10 @@ namespace TheGreatFollowUpper
 
             // The (... + 7) % 7 ensures we end up with a value in the range [0, 6]
             int daysToAdd = ((int)day - (int)start.DayOfWeek + 7) % 7;
+
+            if (daysToAdd == 0)
+                daysToAdd = 7; //hack: if we say next friday and it s friday, the result is 0
+
             return start.AddDays(daysToAdd);
         }
 
